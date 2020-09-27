@@ -2,10 +2,10 @@
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Хост: localhost:3306
--- Время создания: Сен 23 2020 г., 10:56
--- Версия сервера: 5.7.24
--- Версия PHP: 7.4.1
+-- Host: localhost:3306
+-- Generation Time: Sep 27, 2020 at 11:59 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `testdb`
+-- Database: `testdb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `custumers`
+-- Table structure for table `custumers`
 --
 
 CREATE TABLE `custumers` (
@@ -34,7 +34,7 @@ CREATE TABLE `custumers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `custumers`
+-- Dumping data for table `custumers`
 --
 
 INSERT INTO `custumers` (`id`, `CustumerAdr`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `custumers` (`id`, `CustumerAdr`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -56,7 +56,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `orderDescription`, `totalprice`, `Custumer_id`, `adr`, `orderDate`) VALUES
@@ -77,12 +77,13 @@ INSERT INTO `orders` (`id`, `orderDescription`, `totalprice`, `Custumer_id`, `ad
 (17, 'blabla', 1721, 1, 'Bolotnaya street', '2022-09-24'),
 (18, 'blabla', 1721, 1, 'Bolotnaya street', '2022-09-24'),
 (19, 'blabla', 1721, 1, 'Bolotnaya street', '2022-09-24'),
-(20, 'blabla', 1721, 1, 'Bolotnaya street', '2022-09-24');
+(20, 'blabla', 1721, 1, 'Bolotnaya street', '2022-09-24'),
+(21, '15,2,17,44', 2222, 1, 'Bulgakova street', '2022-10-05');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -93,45 +94,45 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Индексы сохранённых таблиц
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `custumers`
+-- Indexes for table `custumers`
 --
 ALTER TABLE `custumers`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Индексы таблицы `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Индексы таблицы `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `custumers`
+-- AUTO_INCREMENT for table `custumers`
 --
 ALTER TABLE `custumers`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT для таблицы `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
